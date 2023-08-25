@@ -91,7 +91,8 @@ i {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/bg.svg");
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.7), #06121e), url("../assets/corte4.jpg");
+  background-size: contain;
   left: 0;
   top: 0;
   width: 100%;
@@ -100,7 +101,7 @@ i {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 0;
-  opacity: 0.9;
+  opacity: 0.4;
 }
 
 .hero {
@@ -174,7 +175,7 @@ i {
   align-items: center;
   justify-content: center;
   gap: 14px;
-  padding: 34px 14px 64px 14px;
+  padding: 24px 14px 84px 14px;
 }
 .about-content img {
   max-width: 570px;
@@ -197,6 +198,9 @@ i {
   .about-content {
     flex-direction: column;
   }
+  .about-description {
+    text-align: center;
+  }
 }
 .services {
   background-color: #FFF;
@@ -205,7 +209,7 @@ i {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 54px 14px;
+  padding: 44px 14px;
 }
 
 .services-content h2 {
@@ -227,7 +231,7 @@ i {
   justify-content: center;
   align-items: center;
   gap: 16px;
-  padding: 0 44px 34px 44px;
+  padding: 0 44px 0px 44px;
 }
 
 .haircut {
@@ -242,6 +246,7 @@ i {
 .haircut img {
   width: 100%;
   max-width: 354px;
+  max-height: 313px;
   transition: transform 0.2s;
 }
 .haircut img:hover {
@@ -267,23 +272,62 @@ i {
 }
 
 .products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 0 44px 34px 44px;
+}
+
+.product {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+.product img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.2s;
+}
+.product img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.product-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+  background-color: #FFF;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .haircuts, .products {
+    flex-direction: column;
+  }
+  .haircut img {
+    max-width: 340px;
+  }
+  .product img {
+    max-width: 340px;
+  }
+}
+.map-txt {
   background-color: #FFF;
   color: #232224;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0px 14px;
+  padding: 0px 14px 44px 0px;
 }
 
-@media screen and (max-width: 768px) {
-  .haircuts {
-    flex-direction: column;
-  }
-  .haircut img {
-    max-width: 740px;
-  }
-}
 .footer {
   display: flex;
   flex-direction: column;
@@ -300,6 +344,14 @@ i {
   color: #FFF;
 }
 
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 54px 0 85px 0;
+  }
+  .footer p {
+    text-align: center;
+  }
+}
 .btn-whatsapp {
   position: fixed;
   bottom: 14px;
