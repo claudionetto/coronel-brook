@@ -91,8 +91,8 @@ i {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.7), #06121e), url("../assets/corte4.jpg");
-  background-size: contain;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/sobrancelha.jpg");
+  background-size: cover;
   left: 0;
   top: 0;
   width: 100%;
@@ -101,7 +101,7 @@ i {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 0;
-  opacity: 0.4;
+  opacity: 0.1;
 }
 
 .hero {
@@ -245,8 +245,8 @@ i {
 }
 .haircut img {
   width: 100%;
-  max-width: 354px;
-  max-height: 313px;
+  max-width: 320px;
+  max-height: 320px;
   transition: transform 0.2s;
 }
 .haircut img:hover {
@@ -290,7 +290,8 @@ i {
 }
 .product img {
   width: 100%;
-  max-width: 354px;
+  max-width: 320px;
+  max-height: 320px;
   transition: transform 0.2s;
 }
 .product img:hover {
@@ -325,17 +326,24 @@ i {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0px 14px 44px 0px;
+  padding: 24px 14px 44px 0px;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: center;
   padding: 54px 0;
   gap: 24px;
   color: #FFF;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .footer-icons {
@@ -347,9 +355,6 @@ i {
 @media screen and (max-width: 768px) {
   .footer {
     padding: 54px 0 85px 0;
-  }
-  .footer p {
-    text-align: center;
   }
 }
 .btn-whatsapp {
